@@ -1,0 +1,148 @@
+:root {
+    --verde-floresta: #073d1d;
+    --marrom-terra: #8B4513;
+    --bege-areia: #F5F5DC;
+    --bordo: #800000;
+    --dourado: #FFD700;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bege-areia);
+    color: var(--verde-floresta);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--verde-floresta);
+    color: var(--bege-areia);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+nav {
+    margin-top: 10px; /* Ajustado para não sobrepor o cabeçalho */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+nav a {
+    color: var(--dourado);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--dourado);
+    color: var(--verde-floresta);
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background-color: var(--verde-floresta);
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+nav ul li:hover .dropdown {
+    display: flex;
+}
+
+.dropdown a {
+    padding: 10px;
+    font-size: 1em;
+    color: var(--bege-areia);
+}
+
+.dropdown a:hover {
+    background-color: var(--marrom-terra);
+    color: var(--bege-areia);
+}
+main {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: var(--verde-floresta);
+    color: var(--bege-areia);
+}
+
+table td {
+    background-color: #f4f4f4;
+}
+
+.betting-form {
+    margin: 20px 0;
+}
+
+.betting-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.betting-form select,
+.betting-form input {
+    margin-bottom: 10px;
+}
+
+.betting-form button {
+    background-color: var(--dourado);
+    color: var(--verde-floresta);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.betting-form button:hover {
+    background-color: var(--verde-floresta);
+    color: var(--dourado);
+}
+
+#result {
+    font-size: 1.2em;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Hipismo - Página Inicial</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/index.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/olympic.bet.png" alt="Logo das Olimpíadas">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html">Corridas de Cavalos</a>
+                    <div class="dropdown">
+                        <a href="corrida-plana.html">Corrida Plana</a>
+                        <a href="corrida-com-barreiras.html">Corrida com Barreiras</a>
+                        <a href="corrida-de-arrasto.html">Corrida de Arrasto</a>
+                    </div>
+                </li>
+                <li><a href="hipismo.html">Hipismo</a></li>
+                <li><a href="perfil.html">perfil</a></li> 
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="register-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" id="close-modal">&times;</span>
+                <h2>Registrar</h2>
+                <form id="register-form">
+                    <label for="username">Usuário:</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                    <label for="confirm-password">Senha novamente:</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
+                    <button type="submit">Registrar</button>
+                </form>
+            </div>
+        </div>
+
+        <section class="box-container">
+            <div class="box">
+                <a href="corrida-plana.html">
+                    <img src="../images/corrida plana.jpg" alt="Corrida Plana">
+                    <div class="box-caption">Corrida Plana</div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="corrida-com-barreiras.html">
+                    <img src="../images/corrida com barreira.jpg" alt="Corrida com Barreiras">
+                    <div class="box-caption">Corrida com Barreiras</div>
+                </a>
+            </div>
+            <div class="box">
+                <a href="corrida-de-arrasto.html">
+                    <img src="../images/corrida de arrasto.jpeg" alt="Corrida de Arrasto">
+                    <div class="box-caption">Corrida de Arrasto</div>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Site de Hipismo. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

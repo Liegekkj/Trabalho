@@ -1,0 +1,282 @@
+:root {
+    --verde-floresta: #073d1d;
+    --marrom-terra: #8B4513;
+    --bege-areia: #F5F5DC;
+    --bordo: #800000;
+    --dourado: #FFD700;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Garamond', serif;
+    color: var(--verde-floresta);
+    background-color: var(--bege-areia);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--verde-floresta);
+    color: var(--bege-areia);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 70px; /* Ajuste a altura da imagem do logo */
+}
+
+
+nav {
+    margin-top: 10px; /* Ajustado para não sobrepor o cabeçalho */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+nav a {
+    color: var(--dourado);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--dourado);
+    color: var(--verde-floresta);
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background-color: var(--verde-floresta);
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+nav ul li:hover .dropdown {
+    display: flex;
+}
+
+.dropdown a {
+    padding: 10px;
+    font-size: 1em;
+    color: var(--bege-areia);
+}
+
+.dropdown a:hover {
+    background-color: var(--marrom-terra);
+    color: var(--bege-areia);
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.info {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.betting-section {
+    display: flex;
+    flex-direction: column; /* Melhor para responsividade */
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.betting {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-bottom: 20px; /* Ajuste para layout de coluna */
+}
+
+.betting h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.horse-selection, .bet-amount, .account-balance {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="number"], select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--bordo);
+    color: var(--bege-areia);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--marrom-terra);
+}
+
+.bet-message {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.horse-info {
+    flex: 1;
+}
+
+.horse-info h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+table th {
+    background-color: var(--verde-floresta);
+    color: var(--bege-areia);
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+footer {
+    background-color: var(--verde-floresta);
+    color: var(--bege-areia);
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+/*  Corrida  */
+
+.race-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.race-track {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border: 2px solid var(--verde-floresta);
+    background-color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.horse {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+}
+
+#horse1 { background-image: url('../images/horse1.png'); }
+#horse2 { background-image: url('../images/horse2.png'); }
+#horse3 { background-image: url('../images/horse3.png'); }
+#horse4 { background-image: url('../images/horse4.png'); }
+
+.finish-line {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--bordo);
+}
+
+button {
+    width: auto;
+    padding: 10px 20px;
+    background-color: var(--bordo);
+    color: var(--bege-areia);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: var(--marrom-terra);
+}
+
+#race-result {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    .betting-section {
+        flex-direction: column;
+    }
+
+    .betting {
+        margin-right: 0;
+    }
+}

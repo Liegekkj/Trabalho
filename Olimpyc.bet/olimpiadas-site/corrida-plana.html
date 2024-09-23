@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrida Plana</title>
+    <link rel="stylesheet" href="../css/corrida-plana.css">
+    <script src="../js/corrida-plana.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/olympic.bet.png" alt="Logo das Olimpíadas" style="width: 100px; height: 70px;">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html">Corridas de Cavalos</a>
+                    <div class="dropdown">
+                        <a href="corrida-plana.html">Corrida Plana</a>
+                        <a href="corrida-com-barreiras.html">Corrida com Barreiras</a>
+                        <a href="corrida-de-arrasto.html">Corrida de Arrasto</a>
+                    </div>
+                </li>
+                <li><a href="hipismo.html">Hipismo</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="info">
+            <h2>Corrida Plana</h2>
+            <p>A corrida plana é a modalidade mais comum das corridas de cavalos, caracterizada por ser realizada em pistas retas ou ovais, sem obstáculos.</p>
+        </section>
+
+        <section class="betting-section">
+            <div class="betting">
+                <h3>Faça sua Aposta</h3>
+                <form id="betting-form">
+                    <div class="horse-selection">
+                        <label for="horse-select">Selecione o Cavalo:</label>
+                        <select id="horse-select" name="horse">
+                            <option value="monghan boy">monghan boy</option>
+                            <option value="Clem">Clem</option>
+                            <option value="Duke">Duke</option>
+                            <option value="Sally">Sally</option>
+                        </select>
+                    </div>
+
+                    <div class="bet-amount">
+                        <label for="bet-value">Valor da Aposta:</label>
+                        <input type="number" id="bet-value" name="bet-value" min="1" step="0.01" required>
+                    </div>
+
+                    <div class="account-balance">
+                        <p>Saldo disponível: <span id="balance">R$ 100,00</span></p>
+                    </div>
+
+                    <button type="button" onclick="placeBet()">Apostar</button>
+                </form>
+
+                <div id="bet-message" class="bet-message"></div>
+            </div>
+
+            <div class="horse-info">
+                <h3>Informações dos Cavalos</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Raça</th>
+                            <th>Nome do Cavalo</th>
+                            <th>Tempo de Descanso</th>
+                            <th>Tempo de Treino</th>
+                            <th>Vitórias Recentes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Thoroughbred</td>
+                            <td>monghan boy</td>
+                            <td>2 dias</td>
+                            <td>5 dias</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Thoroughbred</td>
+                            <td>Clem</td>
+                            <td>1 dia</td>
+                            <td>6 dias</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Irish Sport Horse</td>
+                            <td>Duke</td>
+                            <td>3 dias</td>
+                            <td>4 dias</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Arabian</td>
+                            <td>Sally</td>
+                            <td>3 dias</td>
+                            <td>4 dias</td>
+                            <td>4</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

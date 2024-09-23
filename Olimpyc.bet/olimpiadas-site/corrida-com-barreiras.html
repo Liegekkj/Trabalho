@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrida de Cavalos</title>
+    <link rel="stylesheet" href="../css/corrida com barreiras.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo" style="width: 100px; height: 70px;">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="corrida.html">Corridas de Cavalos</a>
+                    <div class="dropdown">
+                        <a href="corrida-plana.html">Corrida Plana</a>
+                        <a href="corrida-com-barreiras.html">Corrida com Barreiras</a>
+                        <a href="corrida-de-arrasto.html">Corrida de Arrasto</a>
+                    </div>
+                </li>
+                <li><a href="hipismo.html">Hipismo</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="info">
+            <h2>Corrida de Cavalos</h2>
+            <p>Assista os cavalos competirem em uma corrida circular!</p>
+        </section>
+        <section class="race-section">
+            <canvas id="raceCanvas" width="800" height="800"></canvas>
+            <button id="start-race">Iniciar Corrida</button>
+            <div class="betting-section">
+                <form id="betting-form">
+                    <label for="color-select">Escolha a cor do cavalo:</label>
+                    <select id="color-select">
+                        <option value="#FF0000">Vermelho</option>
+                        <option value="#00FF00">Verde</option>
+                        <option value="#0000FF">Azul</option>
+                        <option value="#FFFF00">Amarelo</option>
+                    </select>
+                    <label for="bet-amount">Valor da aposta:</label>
+                    <input type="number" id="bet-amount" min="1" step="0.01" required>
+                    <button type="submit">Apostar</button>
+                </form>
+            </div>
+            <div id="race-result"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Site de Hipismo. Todos os direitos reservados.</p>
+    </footer>
+    <script src="../js/corrida com barreias.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+:root {
+    --verde-floresta: #073d1d;
+    --marrom-terra: #8B4513;
+    --bege-areia: #F5F5DC;
+    --bordo: #800000;
+    --dourado: #FFD700;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Garamond', serif;
+    color: var(--verde-floresta);
+    background-color: var(--bege-areia);
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--verde-floresta);
+    color: var(--bege-areia);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 100px;
+    height: 70px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+nav a {
+    color: var(--dourado);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--dourado);
+    color: var(--verde-floresta);
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background-color: var(--verde-floresta);
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+nav ul li:hover .dropdown {
+    display: flex;
+}
+
+.dropdown a {
+    padding: 10px;
+    font-size: 1em;
+    color: var(--bege-areia);
+}
+
+.dropdown a:hover {
+    background-color: var(--marrom-terra);
+    color: var(--bege-areia);
+}
+
+main {
+    padding: 20px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    color: var(--bordo);
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: var(--verde-floresta);
+}
+
+.info, .history, .curiosities, .famous-riders {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--bege-areia);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info h2, .history h2, .curiosities h2, .famous-riders h2 {
+    font-size: 2em;
+    color: var(--bordo);
+    margin-bottom: 20px;
+}
+
+.info p, .history p, .curiosities p {
+    font-size: 1.2em;
+    color: var(--verde-floresta);
+    margin-bottom: 40px;
+}
+
+.info ul, .curiosities ul {
+    list-style-type: disc;
+    margin-left: 40px;
+    font-size: 1.2em;
+    color: var(--verde-floresta);
+}
+
+.famous-riders .horse-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.horse-box {
+    background-color: var(--bege-areia);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    width: 300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.horse-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.horse-box h3 {
+    font-size: 1.5em;
+    color: var(--bordo);
+    margin: 15px 0 10px 0;
+}
+
+.horse-box p {
+    font-size: 1em;
+    color: var(--verde-floresta);
+}
+
+footer {
+    background-color: var(--verde-floresta);
+    color: var(--bege-areia);
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}

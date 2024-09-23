@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="../css/perfil-saque-deposito.css">
+    <script src="../js/perfil.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/olympic.bet.png" alt="Logo das Olimpíadas" style="width: 100px; height: 70px;">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html">Corridas de Cavalos</a>
+                    <div class="dropdown">
+                        <a href="corrida-plana.html">Corrida Plana</a>
+                        <a href="corrida-com-barreiras.html">Corrida com Barreiras</a>
+                        <a href="corrida-de-arrasto.html">Corrida de Arrasto</a>
+                    </div>
+                </li>
+                <li><a href="hipismo.html">Hipismo</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="info">
+            <div class="profile-container">
+                <div class="profile-info">
+                    <img src="../images/fotoperfil.jpeg" alt="Imagem de Perfil" class="profile-image">
+                    <div class="profile-details">
+                        <h3 id="user-name">João da Silva</h3>
+                        <p><strong>ID da Conta:</strong> <span id="account-id">1234567890</span></p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="box deposit-box">
+                        <h3>Depósito</h3>
+                        <div id="balance-display">Saldo: R$ 0.00</div>
+                        <button class="deposit-button" data-amount="10">R$ 10</button>
+                        <button class="deposit-button" data-amount="20">R$ 20</button>
+                        <button class="deposit-button" data-amount="50">R$ 50</button>
+                        <button class="deposit-button" data-amount="100">R$ 100</button>
+                        <button class="deposit-button" data-amount="200">R$ 200</button>
+                        <button class="deposit-button" data-amount="500">R$ 500</button>
+                        <div id="deposit-message" class="hidden"></div>
+                    </div>
+                    <div class="box saque-box">
+                        <h3>Saque</h3>
+                        <form id="saque-form">
+                            <label for="valor">Valor do Saque:</label>
+                            <input type="number" id="valor" name="valor" min="0" step="0.01" required>
+                            <button type="submit">Sacar</button>
+                        </form>
+                        <div id="mensagem" class="hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Site de Hipismo. Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/scripts.js" defer></script>
+</body>
+</html>

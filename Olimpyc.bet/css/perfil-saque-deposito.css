@@ -1,0 +1,253 @@
+:root {
+    --verde-floresta: #073d1d;
+    --marrom-terra: #8B4513;
+    --bege-areia: #F5F5DC;
+    --bordo: #800000;
+    --dourado: #FFD700;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Garamond', serif;
+    color: var(--verde-floresta);
+    background-color: var(--bege-areia);
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--verde-floresta);
+    color: var(--bege-areia);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+nav a {
+    color: var(--dourado);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--dourado);
+    color: var(--verde-floresta);
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background-color: var(--verde-floresta);
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+nav ul li:hover .dropdown {
+    display: flex;
+}
+
+.dropdown a {
+    padding: 10px;
+    font-size: 1em;
+    color: var(--bege-areia);
+}
+
+.dropdown a:hover {
+    background-color: var(--marrom-terra);
+    color: var(--bege-areia);
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: var(--bege-areia);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-info h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: var(--verde-floresta);
+}
+
+.profile-info p {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+.profile-info strong {
+    color: var(--bordo);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinhamento ao topo para deixar espaço no fundo */
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte se necessário */
+}
+
+.box {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: var(--bege-areia);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.deposit-box,
+.saque-box {
+    flex: 1; /* Permite que as caixas se expandam igualmente */
+    margin: 10px; /* Espaço ao redor das caixas */
+}
+
+.deposit-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: var(--verde-floresta);
+    color: var(--bege-areia);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.deposit-button:hover {
+    background-color: var(--bordo);
+}
+
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+form input {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 0.7em 1.5em;
+    background-color: var(--verde-floresta);
+    color: var(--bege-areia);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--bordo);
+}
+
+#balance-display {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#mensagem, #deposit-message {
+    color: var(--bordo);
+    font-size: 1.2em;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    background-color: var(--verde-floresta);
+    color: var(--bege-areia);
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}

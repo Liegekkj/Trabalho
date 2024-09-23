@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrida de Arrasto</title>
+    <link rel="stylesheet" href="../css/corrida de Arrasto.css">
+    <script src="../js/corrida de arrasto.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/olympic.bet.png" alt="Logo das Olimpíadas" style="width: 100px; height: 70px;">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="index.html">Corridas de Cavalos</a>
+                    <div class="dropdown">
+                        <a href="corrida-plana.html">Corrida Plana</a>
+                        <a href="corrida-com-barreiras.html">Corrida com Barreiras</a>
+                        <a href="corrida-de-arrasto.html">Corrida de Arrasto</a>
+                    </div>
+                </li>
+                <li><a href="hipismo.html">Hipismo</a></li>
+                <li><a href="perfil.html">Perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="info">
+            <h2>Corrida de Arrasto</h2>
+            <p>A Corrida de Arrasto, também conhecida como "Harness Racing", é uma corrida onde os cavalos puxam um sulky, um pequeno carro de duas rodas, enquanto correm.</p>
+        </section>
+        <section class="betting">
+            <h2>Faça sua Aposta</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cavalo</th>
+                        <th>Probabilidade</th>
+                        <th>Odds</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Flash</td>
+                        <td>2:1</td>
+                        <td>2.00</td>
+                    </tr>
+                    <tr>
+                        <td>Thunder</td>
+                        <td>5:1</td>
+                        <td>5.00</td>
+                    </tr>
+                    <tr>
+                        <td>Storm</td>
+                        <td>10:1</td>
+                        <td>10.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="betting-form">
+                <label for="horse">Escolha um cavalo:</label>
+                <select id="horse">
+                    <option value="2.00">Flash (2:1)</option>
+                    <option value="5.00">Thunder (5:1)</option>
+                    <option value="10.00">Storm (10:1)</option>
+                </select>
+                <label for="amount">Valor da aposta:</label>
+                <input type="number" id="amount" min="1" step="1" value="1">
+                <button onclick="placeBet()">Apostar</button>
+            </div>
+            <div id="result">
+                <h3>Seu Saldo:</h3>
+                <p id="balance">R$ 100</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Site de Hipismo. Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/betting.js"></script>
+</body>
+</html>

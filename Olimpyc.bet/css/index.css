@@ -1,0 +1,231 @@
+:root {
+    --verde-floresta: #073d1d;
+    --marrom-terra: #8B4513;
+    --bege-areia: #F5F5DC;
+    --bordo: #800000;
+    --dourado: #FFD700;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Garamond', serif;
+    color: var(--verde-floresta);
+    background-color: var(--bege-areia);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    flex: 1;
+}
+
+header {
+    background-color: var(--verde-floresta);
+    color: var(--bege-areia);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    max-width: 100px; /* Ajusta a largura máxima da logo */
+    height: auto; /* Mantém a altura proporcional */
+}
+
+.logo img {
+    width: 100px; /* Ajusta a largura da imagem à div .logo */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+nav a {
+    color: var(--dourado);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--dourado);
+    color: var(--verde-floresta);
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 200px;
+    background-color: var(--verde-floresta);
+    border-radius: 5px;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+nav ul li:hover .dropdown {
+    display: flex;
+}
+
+.dropdown a {
+    padding: 10px;
+    font-size: 1em;
+    color: var(--bege-areia);
+}
+
+.dropdown a:hover {
+    background-color: var(--marrom-terra);
+    color: var(--bege-areia);
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+footer {
+    background-color: var(--verde-floresta);
+    color: var(--bege-areia);
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Box das 4 imagens */
+.box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.box {
+    width: 23%;
+    padding-bottom: 23%; /* Mantém a proporção da caixa */
+    background-color: #f4f4f4;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px; /* Adiciona espaço inferior para separar as linhas */
+}
+
+.box img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem sem distorção */
+    transform: translate(-50%, -50%); /* Centraliza a imagem */
+}
+
+.box-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Modal */
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    background-color: var(--bege-areia);
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: var(--verde-floresta);
+}
+
+.modal.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.modal-content h2 {
+    margin: 0 0 10px;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-content label {
+    margin: 5px 0;
+}
+
+.modal-content input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid var(--verde-floresta);
+    border-radius: 5px;
+}
+
+.modal-content button {
+    background-color: var(--verde-floresta);
+    color: var(--bege-areia);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.modal-content button:hover {
+    background-color: var(--dourado);
+}
